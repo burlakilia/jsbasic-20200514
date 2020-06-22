@@ -1,0 +1,29 @@
+{
+  "name": "jsbasic-20200514",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "static-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burlakilia/jsbasic-20200514.git"
+  },
+  "author": "Burlak Ilia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burlakilia/jsbasic-20200514/issues"
+  },
+  "homepage": "https://github.com/burlakilia/jsbasic-20200514#readme",
+  "dependencies": {
+    "static-server": "^2.2.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0"
+  }
+}

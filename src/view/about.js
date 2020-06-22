@@ -9,23 +9,26 @@ export class AboutView extends View {
         this.model = new AboutModel();
     }
 
-    async render() {
-        const data = await this.model.getAboutData();
+    render() {
+        this.model.getAboutData()
+            .then(data => {
+                this.el.innerHTML = `
+                      <div class="profile">
+                        <div class="profile__avatar"/>
+                      </div> 
+                    `;
 
-        this.el.innerHTML = `
-      <div class="profile">
-        <div class="profile__avatar"/>
-      </div> 
-    `;
+                const avatar = new AvatarComponent({
+                    el:  this.el.querySelector('.profile__avatar'),
+                    options: {
+                        avatarUrl: data.avatar,
+                    }
+                });
 
-        const avatar = new AvatarComponent({
-            el:  this.el.querySelector('.profile__avatar'),
-            options: {
-                avatarUrl: data.avatar,
-            }
-        });
+                avatar.render();
+            });
 
-        avatar.render();
+
     }
 
 }

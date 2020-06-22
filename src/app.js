@@ -17,4 +17,3 @@ router.register('skills', new SkillsView(
 
 router.start();
 
-

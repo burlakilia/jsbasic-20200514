@@ -3,9 +3,9 @@ export class AboutModel {
     constructor() {
     }
 
-    async getAboutData() {
-        const resp = await fetch('./data/about.json');
-        return await resp.json();
+    getAboutData() {
+        return fetch('./data/about.json')
+            .then(resp => resp.json());
     }
 
 }
